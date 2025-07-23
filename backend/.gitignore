@@ -1,0 +1,40 @@
+# Environment files
+.env
+.env.*  # in case of .env.local, .env.development, etc.
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage reports
+coverage/
+
+# Optional: if using Firebase or similar
+.firebase/
+.firebaserc
+
+# Optional: if using next.js or similar
+.next/
+out/
+
+# Optional: temporary uploads
+uploads/
+tmp/
+temp/
