@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
@@ -26,26 +27,26 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+    <div className="container mx-auto px-4 py-12">
+      <header className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
           Exquisite Handcrafted Jewelry
         </h1>
-        <p className="text-lg max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Discover our collection of premium gems and precious metals crafted 
-          with timeless elegance
+          with timeless elegance.
         </p>
       </header>
 
       {loading ? (
-        <div className="text-center py-12">
-          <div className="inline-block animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-gold"></div>
-          <p className="mt-4">Loading treasures...</p>
+        <div className="text-center py-16">
+          <div className="inline-block animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-yellow-500"></div>
+          <p className="mt-4 text-gray-700">Loading treasures...</p>
         </div>
       ) : error ? (
-        <div className="text-center py-12 text-red-600">{error}</div>
+        <div className="text-center py-12 text-red-600 font-medium">{error}</div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
           {products.map(product => (
             <ProductCard key={product._id} product={product} />
           ))}
